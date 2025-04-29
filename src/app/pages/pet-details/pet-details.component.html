@@ -4,17 +4,17 @@
   >
     <div class="h-full w-full md:w-[35%]">
       <img
-        [src]="pet?.image"
-        [alt]="pet?.name"
+        [src]="pet()?.image"
+        [alt]="pet()?.name"
         class="object-contain w-full h-full"
       />
     </div>
     <div class="w-full md:w-[65%] h-full pt-[30px] flex flex-col p-3">
-      <h1>Name: {{ pet?.name }}</h1>
-      <h1>Type: {{ pet?.type }}</h1>
-      <h1>Adopted: {{ pet?.adopted ? "yes" : "no" }}</h1>
+      <h1>Name: {{ pet()?.name }}</h1>
+      <h1>Type: {{ pet()?.type }}</h1>
+      <h1>Adopted: {{ pet()?.adopted ? "yes" : "no" }}</h1>
 
-      @if (!pet?.adopted) {
+      @if (!pet()?.adopted) {
       <button
         class="w-[70px] border border-black rounded-md hover:bg-green-400 my-5"
       >
